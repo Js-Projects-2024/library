@@ -1,2 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
 
-  
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Merriweather", serif;
+}
+/*  #F8F4E1 #AF8F6F #74512D #543310   */
+
+.navbar{
+    background-color: #AF8F6F;
+    text-align: left;
+    padding: 5vh ;
+    color: #fefdf3;
+    font-size: 1.5rem;
+    box-shadow: 2px 8px 12px rgba(0, 0, 0, 0.2);;
+}
+.addBook{
+    display: flex;
+    justify-content: center;
+    gap: 5vh;
+    align-items: center;
+    background-color: #F8F4E1;
+    overflow: hidden;
+    flex-wrap: wrap;
+}
+.optional{
+    text-align: center;
+    margin: 4vh;
+    font-size: 2rem;
+}
+.optional img{
+    height: 60vh;
+}
+.optional p{
+    color: #74512D;
+}
+.addBook #newBookBtn{
+    margin: 4vh;
+    height: 12vh;
+    /* width: 35vh; */
+    font-size: 1rem;
+    width: 20vh;
+    border: none;
+    border-radius: 10px;
+    background-color: #74512D;
+    color: #F8F4E1;
+}
+.addBook #newBookBtn:hover{
+    /* font-size: 1.2rem; */
+    background-color: #AF8F6F;
+    /* color: #74512D; */
+}
+
+#bookForm {
+    background-color: #AF8F6F;
+    padding: 6vh;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 4vh;
+
+}
+
+
+#bookForm label {
+    font-size: 1.2rem;
+    margin-bottom: 2vh;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+
+#bookForm input{
+    padding: 8px;
+    margin-bottom: 3vh;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+
+#bookForm button {
+    background-color: #F8F4E1;
+    color: #74512D;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin: 1.2vh;
+}
+
+#bookForm button:hover {
+    background-color: #74512D;
+    color: #F8F4E1;
+    /* font-size: 1.2rem; */
+}
+#bookForm #cancel{
+    background-color: #74512D;
+    color: #F8F4E1;    
+}
+#bookForm #cancel:hover{
+    background-color: #F8F4E1;
+    color: #74512D;    
+}
+
+#error {
+    color: #352009;
+    font-size: 1rem;
+    margin: 1.5vh 0 1.5vh 0;
+}
+
+
+input:focus {
+    border-color:  #352009;
+    outline: none;
+    box-shadow: 0px 0px 5px  #2d1b08;
+}
+
+#booksContainer{
+    background-color:#AF8F6F;
+    padding: 5vh;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 3.5vh;
+}
+
+#booksContainer .book{
+    padding: 2vh;
+    /* background-image: url("images/copy.png");
+    background-size: cover; /* Ensures the image covers the whole area */
+    /* background-position: center; /* Centers the image */
+    /* background-repeat: no-repeat; */ 
+    background-color:#F8F4E1;
+    border-radius: 15px;
+    height: max(300px);
+    padding: 3vh;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    justify-content: center;
+}
+#booksContainer .book h2{
+    font-size: 2.2rem;
+    color:  #74512D;
+}
+#booksContainer .book h5{
+    font-size: 1.2rem;
+    color:  #352009;
+}
+#booksContainer .book p{
+    font-size: 1rem;
+    color:  #74512D;
+    font-weight: bold;
+}
+.book button{
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    border: none;
+    color: white; 
+}
+.book .remove{
+    background-color:#AF8F6F;
+
+}
+.book .remove:hover{
+    background-color: #74512D;
+}
+@media (max-width: 768px) {
+    #booksContainer {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+
+}
+@media (max-width: 480px) {
+    #booksContainer {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+
+}
